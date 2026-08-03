@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Erik Berg — fotograf för porträtt, event, företag, sport och rörligt material.">
+  <title>Erik Berg — Fotograf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400;500&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo">Erik Berg</a>
+    <nav class="nav__links" id="navLinks" aria-label="Huvudmeny">
+      <a href="#arbete">Portfolio</a>
+      <a href="#rorligt">Rörligt</a>
+      <a href="#sport">Sport</a>
+      <a href="#hisingsboll">Hisingsboll</a>
+      <a href="#om">Om mig</a>
+      <a href="#tjanster">Priser</a>
+      <a href="#boka" class="nav__cta js-book">Boka session</a>
+    </nav>
+    <button class="nav__burger" id="burger" type="button" aria-label="Öppna meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero__text reveal">
+        <span class="eyebrow">Fotograf i Stockholm</span>
+        <h1>Stillbild. Film.<br><em>Äkta ögonblick.</em></h1>
+        <p>Bilder och film som berättar din historia – naturligt, tidlöst och med känsla.</p>
+        <div class="hero__actions">
+          <a href="#boka" class="btn btn--primary js-book">Boka en session</a>
+          <a href="#arbete" class="btn btn--text">Se portfolio →</a>
+        </div>
+        <div class="hero__trust"><span class="stars">★★★★★</span><span>5/5 i betyg · 10 års erfarenhet</span></div>
+      </div>
+      <div class="hero__image reveal reveal-delay-1">
+        <div class="arch arch--hero">
+          <img src="images/portrait.jpg" alt="Erik Berg fotograf" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <div class="strip" aria-label="Fotokategorier">
+      <span>Event</span><i></i><span>Porträtt</span><i></i><span>Lifestyle</span><i></i><span>Sport</span>
+    </div>
+
+    <section class="process section-space">
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">Enkelt från start till mål</span>
+        <h2>Tre enkla steg</h2>
+      </div>
+      <div class="process__grid">
+        <article class="process__card reveal"><span class="process__num">01</span><h3>Boka</h3><p>Välj en tid som passar dig — dag, kväll eller helg.</p></article>
+        <article class="process__card reveal reveal-delay-1"><span class="process__num">02</span><h3>Fotografering</h3><p>Jag guidar dig genom sessionen i lugn takt. Inget känns forcerat.</p></article>
+        <article class="process__card reveal reveal-delay-2"><span class="process__num">03</span><h3>Leverans</h3><p>Välj dina favoriter och få färdiga bilder levererade digitalt.</p></article>
+      </div>
+    </section>
+
+    <section class="quote-block reveal">
+      <p>“Jag kände mig helt avslappnad trots att jag normalt inte gillar att bli fotograferad. Erik skapade en trygg känsla och bilderna blev helt magiska.”</p>
+      <span>— Maja</span>
+    </section>
+
+    <section class="work section-space" id="arbete">
+      <div class="section-head reveal"><span class="eyebrow">Portfolio</span><h2>Utvalda ögonblick</h2></div>
+      <div class="work__grid">
+        <figure class="work__item reveal"><div class="arch arch--portfolio"><img src="images/fotboll.jpg" alt="Fotboll under match" loading="lazy"></div><figcaption>Sport</figcaption></figure>
+        <figure class="work__item reveal reveal-delay-1"><div class="arch arch--portfolio"><img src="images/gifta.jpg" alt="Bröllopsdetalj" loading="lazy"></div><figcaption>Bröllop</figcaption></figure>
+        <figure class="work__item reveal reveal-delay-2"><div class="arch arch--portfolio"><img src="images/student.jpg" alt="Studentfirande" loading="lazy"></div><figcaption>Event</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="motion section-space" id="rorligt">
+      <div class="motion__intro reveal"><span class="section-number"></span><h2>Berättelser skapade<em>för att röra sig.</em></h2><p>Reels, sport, event och socialt innehåll med tempo, känsla och en tydlig riktning.</p></div>
+      <div class="motion-slider reveal">
+        <button class="motion-slider__arrow motion-slider__arrow--left" id="previousVideo" type="button" aria-label="Föregående video">←</button>
+        <div class="motion-slider__center">
+          <div class="motion-slider__video-wrapper">
+            <video id="motionVideo" autoplay muted loop playsinline preload="metadata" poster="images/event.jpg">Din webbläsare stödjer inte video.</video>
+            <span class="motion-slider__counter" id="motionVideoNumber">01 / 03</span>
+          </div>
+          <div class="motion-slider__info"><div><span id="motionVideoCategory">Event</span><h3 id="motionVideoTitle">Event & aftermovies</h3></div><p id="motionVideoDescription">Känslan från kvällen, koncentrerad till film.</p></div>
+          <div class="motion-slider__dots" id="motionVideoDots"></div>
+        </div>
+        <button class="motion-slider__arrow motion-slider__arrow--right" id="nextVideo" type="button" aria-label="Nästa video">→</button>
+      </div>
+    </section>
+
+    <section class="sport-gallery section-space" id="sport">
+      <div class="sport-gallery__head reveal"><span class="section-number">03 / SPORT</span><h2>Tempo.<br><em>Närvaro.</em><br>Instinkt.</h2><p>Ett urval från matcher, träningar och ögonblick där allt händer på en sekund.</p></div>
+      <div class="sport-gallery__grid">
+        <figure class="sport-shot sport-shot--hero reveal"><img src="images/sport-1.jpg" alt="Fotbollsspelare under match" loading="lazy"><figcaption><span>Matchdag</span><strong>01</strong></figcaption></figure>
+        <figure class="sport-shot reveal reveal-delay-1"><img src="images/sport-2.jpg" alt="Fokuserad spelare" loading="lazy"><figcaption><span>Fokus</span><strong>02</strong></figcaption></figure>
+        <figure class="sport-shot reveal reveal-delay-2"><img src="images/sport-3.jpg" alt="Rörelse under match" loading="lazy"><figcaption><span>Rörelse</span><strong>03</strong></figcaption></figure>
+        <figure class="sport-shot sport-shot--wide reveal"><img src="images/sport-4.jpg" alt="Fotbollspublik" loading="lazy"><figcaption><span>Atmosfär</span><strong>04</strong></figcaption></figure>
+        <figure class="sport-shot reveal reveal-delay-1"><img src="images/sport-5.jpg" alt="Spelare efter slutsignal" loading="lazy"><figcaption><span>Efter slutsignal</span><strong>05</strong></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case section-space" id="hisingsboll">
+      <div class="case__copy reveal"><span class="section-number">04 / CASE STUDY</span><span class="eyebrow">Hisingsboll</span><h2>Av Hisingen.<br><em>För Hisingen.</em></h2><p>Fotbollen på Hisingen berättad från insidan — genom matchbilder, intervjuer, reels och rörligt innehåll.</p><ul class="case__tags"><li>Matchfoto</li><li>Intervjuer</li><li>Reels</li><li>Behind the scenes</li></ul><a class="btn btn--primary" href="https://www.instagram.com/hisingsboll/" target="_blank" rel="noopener noreferrer">Utforska @hisingsboll ↗</a></div>
+      <div class="case__visual reveal reveal-delay-1"><span class="case__word">HISINGEN</span><div class="phone-frame"><video autoplay muted loop playsinline preload="metadata" poster="images/sport.jpg"><source src="videos/hisingsboll.mp4" type="video/mp4"></video><div class="phone-frame__top"><span></span><b>@hisingsboll</b><i>•••</i></div></div></div>
+    </section>
+
+    <section class="about section-space" id="om">
+      <div class="about__inner"><div class="arch about__img reveal"><img src="images/portrait.jpg" alt="Erik Berg, fotograf" loading="lazy"></div><div class="about__text reveal reveal-delay-1"><span class="eyebrow">Om fotografen</span><h2>Ett lugnt öga för äkta ögonblick.</h2><p>Jag heter Erik och har fotograferat människor sedan 2014 — från intima porträtt till stora bröllop. Jag gillar riktigt ljus framför uppstyrda poser och tror att de bästa bilderna uppstår när ingen längre tänker på kameran.</p><p>Baserad i Stockholm, men reser gärna dit uppdraget tar mig.</p><div class="about__stats"><div><strong>10+</strong><span>år som fotograf</span></div><div><strong>300+</strong><span>genomförda uppdrag</span></div><div><strong>40+</strong><span>bröllop fångade</span></div></div></div></div>
+    </section>
+
+    <section class="services section-space" id="tjanster">
+      <div class="section-head section-head--center reveal"><span class="eyebrow">Prislista</span><h2>Tjänster</h2></div>
+      <div class="services__grid"><article class="service-card reveal"><span>01</span><h3>Porträtt</h3><p>En timmes fotografering och digitalt galleri med minst 20 redigerade bilder.</p><strong>Från 1 800 kr</strong></article><article class="service-card reveal reveal-delay-1"><span>02</span><h3>Bröllop</h3><p>Heldagstäckning och ett komplett digitalt galleri från er stora dag.</p><strong>Från 18 000 kr</strong></article><article class="service-card reveal reveal-delay-2"><span>03</span><h3>Företag</h3><p>Porträtt, kampanjbilder och innehåll för hemsida och sociala medier.</p><strong>Från 3 500 kr</strong></article><article class="service-card reveal reveal-delay-3"><span>04</span><h3>Evenemang</h3><p>Diskret dokumentation av konferenser, fester och lanseringar.</p><strong>Från 2 900 kr</strong></article></div>
+    </section>
+
+    <section class="cta-band" id="boka"><span class="eyebrow">Redo?</span><h2>Skapa något som känns.</h2><p>Foto, film eller båda. Säkra din tid redan idag.</p><a href="#boka" class="btn btn--light js-book">Boka session</a></section>
+  </main>
+
+  <footer class="footer"><div><span class="footer__logo">Erik Berg</span><p>Fotografi · Film · Stockholm</p></div><div class="footer__contact"><a href="mailto:hej@erikbergfoto.se">hej@erikbergfoto.se</a><a href="tel:+46700000000">070-000 00 00</a></div><p class="footer__bottom">© <span id="year"></span> Erik Berg Fotografi</p></footer>
+  <button class="to-top" id="toTop" type="button" aria-label="Till toppen">↑</button>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="script.js"></script>
+</body>
+</html>

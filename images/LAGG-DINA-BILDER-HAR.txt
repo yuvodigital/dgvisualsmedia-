@@ -1,0 +1,16 @@
+Lägg dessa bilder i den här mappen:
+
+event.jpg
+portrait.jpg
+lifestyle.jpg
+sport.jpg
+
+Sportgalleri:
+sport-1.jpg
+sport-2.jpg
+sport-3.jpg
+sport-4.jpg
+sport-5.jpg
+sport-6.jpg
+
+Filnamnen måste vara exakt likadana som ovan, inklusive små bokstäver.
