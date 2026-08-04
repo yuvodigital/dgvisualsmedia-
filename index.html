@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400;500&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -73,14 +72,14 @@
     <section class="work section-space" id="arbete">
       <div class="section-head reveal"><span class="eyebrow">Portfolio</span><h2>Utvalda ögonblick</h2></div>
       <div class="work__grid">
-        <figure class="work__item reveal"><div class="arch arch--portfolio"><img src="images/fotboll.jpg" alt="Fotboll under match" loading="lazy"></div><figcaption>Sport</figcaption></figure>
+        <figure class="work__item reveal"><div class="arch arch--portfolio"><img src="images/Fotboll.jpg" alt="Fotboll under match" loading="lazy"></div><figcaption>Sport</figcaption></figure>
         <figure class="work__item reveal reveal-delay-1"><div class="arch arch--portfolio"><img src="images/gifta.jpg" alt="Bröllopsdetalj" loading="lazy"></div><figcaption>Bröllop</figcaption></figure>
         <figure class="work__item reveal reveal-delay-2"><div class="arch arch--portfolio"><img src="images/student.jpg" alt="Studentfirande" loading="lazy"></div><figcaption>Event</figcaption></figure>
       </div>
     </section>
 
     <section class="motion section-space" id="rorligt">
-      <div class="motion__intro reveal"><span class="section-number"></span><h2>Berättelser skapade<em>för att röra sig.</em></h2><p>Reels, sport, event och socialt innehåll med tempo, känsla och en tydlig riktning.</p></div>
+      <div class="motion__intro reveal"><span class="section-number">02 / RÖRLIGT</span><h2>Berättelser skapade<br><em>för att röra sig.</em></h2><p>Reels, sport, event och socialt innehåll med tempo, känsla och en tydlig riktning.</p></div>
       <div class="motion-slider reveal">
         <button class="motion-slider__arrow motion-slider__arrow--left" id="previousVideo" type="button" aria-label="Föregående video">←</button>
         <div class="motion-slider__center">
@@ -124,8 +123,34 @@
   </main>
 
   <footer class="footer"><div><span class="footer__logo">Erik Berg</span><p>Fotografi · Film · Stockholm</p></div><div class="footer__contact"><a href="mailto:hej@erikbergfoto.se">hej@erikbergfoto.se</a><a href="tel:+46700000000">070-000 00 00</a></div><p class="footer__bottom">© <span id="year"></span> Erik Berg Fotografi</p></footer>
+
+  <div class="booking-modal" id="bookingModal" aria-hidden="true">
+    <div class="booking-modal__backdrop" data-close-booking></div>
+    <div class="booking-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="booking-modal__close" type="button" aria-label="Stäng bokningsformulär" data-close-booking>×</button>
+      <span class="eyebrow">Boka session</span>
+      <h2 id="bookingTitle">Berätta vad du vill skapa.</h2>
+      <p>Fyll i formuläret så öppnas ett färdigt mejl som du kan skicka direkt.</p>
+      <form id="bookingForm" class="booking-form">
+        <label>Namn<input type="text" id="bookingName" autocomplete="name" required></label>
+        <label>E-post<input type="email" id="bookingEmail" autocomplete="email" required></label>
+        <label>Typ av uppdrag
+          <select id="bookingType" required>
+            <option value="">Välj ett alternativ</option>
+            <option>Porträtt</option><option>Bröllop</option><option>Företag</option>
+            <option>Event</option><option>Sport</option><option>Film / reels</option><option>Annat</option>
+          </select>
+        </label>
+        <label>Önskat datum<input type="date" id="bookingDate"></label>
+        <label class="booking-form__full">Meddelande
+          <textarea id="bookingMessage" rows="5" placeholder="Beskriv kort vad du behöver hjälp med."></textarea>
+        </label>
+        <button class="btn btn--primary booking-form__submit" type="submit">Skicka förfrågan</button>
+      </form>
+    </div>
+  </div>
+
   <button class="to-top" id="toTop" type="button" aria-label="Till toppen">↑</button>
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="script.js"></script>
 </body>
 </html>

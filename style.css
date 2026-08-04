@@ -11,3 +11,30 @@
 @media(max-width:1000px){.hero{grid-template-columns:1fr}.hero__image{order:-1;max-width:430px;margin:auto}.process__grid,.services__grid{grid-template-columns:repeat(2,1fr)}.work__grid{grid-template-columns:repeat(3,1fr)}.sport-gallery__head{grid-template-columns:1fr 2fr}.sport-gallery__head p{grid-column:2}.sport-shot{grid-column:span 6}.sport-shot--hero,.sport-shot--wide{grid-column:span 12}.case,.about__inner{grid-template-columns:1fr}.case__copy{margin:auto}.nav__links{position:fixed;inset:69px 0 0;background:var(--cream);padding:38px var(--pad);flex-direction:column;align-items:flex-start;transform:translateY(-120%);transition:.3s}.nav__links.open{transform:none}.nav__burger{display:block}}
 @media(max-width:700px){.section-space{padding:85px 0}.hero{padding-top:40px}.process__grid,.services__grid,.work__grid{grid-template-columns:1fr}.arch--portfolio{aspect-ratio:4/5}.motion-slider{display:block}.motion-slider__arrow{position:absolute;z-index:4;margin-top:28%;width:48px;height:48px;background:rgba(250,246,240,.92)}.motion-slider__arrow--left{left:10px}.motion-slider__arrow--right{right:10px}.motion-slider__info{grid-template-columns:1fr}.sport-gallery__head{grid-template-columns:1fr}.sport-gallery__head p{grid-column:auto}.sport-gallery__grid{grid-template-columns:1fr}.sport-shot,.sport-shot--hero,.sport-shot--wide{grid-column:1/-1;min-height:450px}.sport-shot--hero{min-height:560px}.case{gap:25px}.case__visual{min-height:560px}.about__stats{gap:20px;flex-wrap:wrap}.footer{grid-template-columns:1fr}.footer__contact{flex-direction:column;gap:8px}.strip{gap:13px;font-size:.65rem}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* Booking modal */
+body.modal-open,body.menu-open{overflow:hidden}
+.booking-modal{position:fixed;inset:0;z-index:1200;display:grid;place-items:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.booking-modal.is-open{opacity:1;visibility:visible}
+.booking-modal__backdrop{position:absolute;inset:0;background:rgba(43,37,33,.58);backdrop-filter:blur(8px)}
+.booking-modal__dialog{position:relative;z-index:1;width:min(680px,100%);max-height:min(88vh,820px);overflow:auto;padding:42px;border:1px solid var(--line);border-radius:28px;background:var(--cream);box-shadow:0 45px 110px -35px rgba(0,0,0,.55);transform:translateY(18px) scale(.98);transition:transform .25s ease}
+.booking-modal.is-open .booking-modal__dialog{transform:none}
+.booking-modal__dialog h2{margin:8px 0 10px;font-family:var(--display);font-size:clamp(2rem,5vw,3.4rem);line-height:1.02}
+.booking-modal__dialog>p{margin:0 0 28px;color:var(--muted)}
+.booking-modal__close{position:absolute;top:18px;right:18px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--ink);font-size:1.6rem;line-height:1;cursor:pointer}
+.booking-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.booking-form label{display:grid;gap:7px;font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--accent2)}
+.booking-form input,.booking-form select,.booking-form textarea{width:100%;border:1px solid var(--line);border-radius:14px;background:#fff;padding:13px 14px;color:var(--ink);font:400 .95rem/1.4 var(--body);outline:none;transition:border-color .2s ease,box-shadow .2s ease}
+.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(184,121,79,.12)}
+.booking-form textarea{resize:vertical;min-height:120px}
+.booking-form__full,.booking-form__submit{grid-column:1/-1}
+.booking-form__submit{border:0;cursor:pointer}
+.motion-slider__dot{padding:0;cursor:pointer}
+.nav__burger{cursor:pointer}
+@media(max-width:700px){
+  .booking-modal{padding:14px}
+  .booking-modal__dialog{padding:34px 20px 24px;border-radius:22px}
+  .booking-form{grid-template-columns:1fr}
+  .booking-form__full,.booking-form__submit{grid-column:auto}
+  .motion-slider__video-wrapper{aspect-ratio:16/10}
+}
