@@ -1,9 +1,0 @@
-Lägg dessa MP4-filer i den här mappen:
-
-showreel.mp4
-event.mp4
-lifestyle.mp4
-sport.mp4
-hisingsboll.mp4
-
-Filnamnen måste vara exakt likadana som ovan, inklusive små bokstäver.
